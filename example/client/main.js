@@ -15,7 +15,7 @@ class PostsCreate extends React.Component {
 
   render() {
     return (
-      <div style={{padding: '10px'}}>
+      <div style={{padding: '10px', marginBottom: '150px'}}>
         <Form
           logErrors={true}
           autoSave={true}
