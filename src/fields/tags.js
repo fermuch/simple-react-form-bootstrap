@@ -35,21 +35,8 @@ class TagsFieldComponent extends FieldType {
           ref='input'
           value={this.state.value}
           onChange={this.onChange.bind(this)}
-        />
-        {/*
-        <FormControl
-          ref='input'
-          value={this.state.value || ''}
-          type={fieldType}
-          placeholder={this.props.placeholder}
-          disabled={this.props.disabled}
-          onChange={this.onChange.bind(this)}
-          onKeyDown={this.onKeyDown.bind(this)}
-          onBlur={() => this.props.onChange(this.state.value)}
-          componentClass={fieldType === 'text' ? 'textarea' : 'input'}
           {...this.passProps}
         />
-        */}
         {this.props.errorMessage &&
           <HelpBlock>Help text with validation state.</HelpBlock>
         }

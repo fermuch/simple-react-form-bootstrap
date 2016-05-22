@@ -75,8 +75,8 @@ class PostsCreate extends React.Component {
           <Field
             fieldName="string-array"
             type="string-array"
-            label="String"
-            placeholder='type="string"'
+            label="String (array) (with maxTags!)"
+            maxTags={2}
           />
         </Form>
       </div>
