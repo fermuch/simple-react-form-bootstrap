@@ -1,0 +1,18 @@
+{
+  "name": "simple-react-form-bootstrap",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0",
+    "react": "^15.1.0",
+    "react-bootstrap": "^0.29.4",
+    "react-dom": "^15.1.0",
+    "simple-react-form": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.2",
+    "eslint-plugin-react": "^5.1.1"
+  }
+}
