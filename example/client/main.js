@@ -21,27 +21,33 @@ class PostsCreate extends React.Component {
           autoSave={true}
           onSubmit={(form) => console.info('onSubmit', form)}
         >
-          {/* TextFieldComponent */}
+          <center>
+            <h1>TextFieldComponent</h1>
+          </center>
           <Field
             fieldName="string"
             type="string"
             label="String"
+            placeholder='type="string"'
           />
           <Field
             fieldName="disabled_string"
             type="string"
             label="Disabled String"
             disabled={true}
+            placeholder='type="string" disabled={true}'
           />
           <Field
             fieldName="text"
             type="text"
             label="Text"
+            placeholder='type="text"'
           />
           <Field
             fieldName="number"
             type="number"
             label="Number"
+            placeholder='type="number"'
           />
           <Field
             fieldName="date"
