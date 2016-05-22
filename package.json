@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/fermuch/simple-react-form-bootstrap.git"
+    "url": "git+https://github.com/fermuch/simple-react-form-bootstrap.git"
   },
   "keywords": [
     "react",
