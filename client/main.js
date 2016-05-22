@@ -16,9 +16,17 @@ class PostsCreate extends React.Component {
     return (
       <Form
         state={this.state}
+        logErrors={true}
+        autoSave={true}
         onChange={({ title, body }) => this.setState({ title, body })}
+        onSubmit={(form) => console.info('onSubmit', form)}
       >
-        <Field fieldName="title" type="string" label="Title" placeholder="just text here!"/>
+        {/* TextFieldComponent */}
+        <Field fieldName="string" type="string" label="String" />
+        <Field fieldName="string" type="string" label="Disabled String" disabled={true} />
+        <Field fieldName="text" type="text" label="Text" />
+        <Field fieldName="number" type="number" label="Number" />
+        <Field fieldName="date" type="date" label="Date" />
       </Form>
     );
   }
