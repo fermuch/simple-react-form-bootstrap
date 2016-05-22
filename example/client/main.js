@@ -15,18 +15,41 @@ class PostsCreate extends React.Component {
 
   render() {
     return (
-      <Form
-        logErrors={true}
-        autoSave={true}
-        onSubmit={(form) => console.info('onSubmit', form)}
-      >
-        {/* TextFieldComponent */}
-        <Field fieldName="string" type="string" label="String" />
-        <Field fieldName="disabled_string" type="string" label="Disabled String" disabled={true} />
-        <Field fieldName="text" type="text" label="Text" />
-        <Field fieldName="number" type="number" label="Number" />
-        <Field fieldName="date" type="date" label="Date" />
-      </Form>
+      <div style={{padding: '10px'}}>
+        <Form
+          logErrors={true}
+          autoSave={true}
+          onSubmit={(form) => console.info('onSubmit', form)}
+        >
+          {/* TextFieldComponent */}
+          <Field
+            fieldName="string"
+            type="string"
+            label="String"
+          />
+          <Field
+            fieldName="disabled_string"
+            type="string"
+            label="Disabled String"
+            disabled={true}
+          />
+          <Field
+            fieldName="text"
+            type="text"
+            label="Text"
+          />
+          <Field
+            fieldName="number"
+            type="number"
+            label="Number"
+          />
+          <Field
+            fieldName="date"
+            type="date"
+            label="Date"
+          />
+        </Form>
+      </div>
     );
   }
 }
