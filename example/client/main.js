@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Form, Field } from 'simple-react-form';
-import {Meteor} from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 
 // register the components
 import 'simple-react-form-bootstrap';
@@ -17,8 +17,8 @@ class PostsCreate extends React.Component {
     return (
       <div style={{padding: '10px', marginBottom: '150px'}}>
         <Form
-          logErrors={true}
           autoSave={true}
+          logErrors={true}
           onSubmit={(form) => console.info('onSubmit', form)}
         >
           <center>
@@ -67,6 +67,16 @@ class PostsCreate extends React.Component {
               {label: 'Option A', value: 'a'},
               {label: 'Option B', value: 'b'},
             ]}
+          />
+
+          <center>
+            <h1>Tags (string-array)</h1>
+          </center>
+          <Field
+            fieldName="string"
+            type="string-array"
+            label="String"
+            placeholder='type="string"'
           />
         </Form>
       </div>
