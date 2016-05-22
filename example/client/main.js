@@ -54,6 +54,20 @@ class PostsCreate extends React.Component {
             type="date"
             label="Date"
           />
+
+          <center>
+            <h1>SelectFieldComponent</h1>
+          </center>
+          <Field
+            fieldName="select"
+            type="select"
+            label="Select"
+            placeholder='type="select"'
+            options={[
+              {label: 'Option A', value: 'a'},
+              {label: 'Option B', value: 'b'},
+            ]}
+          />
         </Form>
       </div>
     );
