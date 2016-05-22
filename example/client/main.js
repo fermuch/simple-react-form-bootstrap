@@ -73,7 +73,7 @@ class PostsCreate extends React.Component {
             <h1>Tags (string-array)</h1>
           </center>
           <Field
-            fieldName="string"
+            fieldName="string-array"
             type="string-array"
             label="String"
             placeholder='type="string"'
