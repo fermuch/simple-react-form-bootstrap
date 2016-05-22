@@ -10,7 +10,7 @@
     "react-bootstrap": "^0.29.4",
     "react-dom": "^15.1.0",
     "simple-react-form": "^1.2.0",
-    "simple-react-form-bootstrap": ".."
+    "simple-react-form-bootstrap": "git+https://github.com/fermuch/simple-react-form-bootstrap.git"
   },
   "devDependencies": {
     "eslint": "^2.10.2",
