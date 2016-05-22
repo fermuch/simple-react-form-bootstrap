@@ -18,7 +18,7 @@ class PostsCreate extends React.Component {
         state={this.state}
         onChange={({ title, body }) => this.setState({ title, body })}
       >
-        <Field fieldName="title" type="string" label="Title"/>
+        <Field fieldName="title" type="string" label="Title" placeholder="just text here!"/>
       </Form>
     );
   }
