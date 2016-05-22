@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { Form, Field } from 'simple-react-form';
 import {Meteor} from 'meteor/meteor';
 
-import '../lib';
+// register the components
+import 'simple-react-form-bootstrap';
 
 class PostsCreate extends React.Component {
 

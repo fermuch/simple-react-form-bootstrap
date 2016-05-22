@@ -1,5 +1,5 @@
 {
-  "name": "simple-react-form-bootstrap",
+  "name": "simple-react-form-bootstrap-example",
   "private": true,
   "scripts": {
     "start": "meteor run"
@@ -9,7 +9,8 @@
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.4",
     "react-dom": "^15.1.0",
-    "simple-react-form": "^1.2.0"
+    "simple-react-form": "^1.2.0",
+    "simple-react-form-bootstrap": ".."
   },
   "devDependencies": {
     "eslint": "^2.10.2",
