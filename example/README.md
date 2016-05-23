@@ -13,6 +13,9 @@ Then,
 
 And go to [http://localhost:3000](http://localhost:3000)
 
+
+
+
 Take a look at [client/main.js][]. All the needed code is there.
 
 This example uses a react-only approach to show how to use simple-react-form without meteor, but the same applies if you're
