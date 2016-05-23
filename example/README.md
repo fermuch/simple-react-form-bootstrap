@@ -11,7 +11,7 @@ Then,
 
 * `meteor`
 
-And go to http://localhost:3000
+And go to [http://localhost:3000](http://localhost:3000)
 
 Take a look at [client/main.js][]. All the needed code is there.
 
