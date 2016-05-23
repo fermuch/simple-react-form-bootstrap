@@ -2,7 +2,14 @@
 
 Bootstrap fields for [simple-react-form][]. Based on [react-bootstrap][]
 
+`npm install simple-react-form-bootstrap --save`
+
 [Demo](https://simple-react-form-bootstrap.herokuapp.com) | [Source](https://github.com/fermuch/simple-react-form-bootstrap/tree/master/example)
+
+## How to use
+
+Check out [simple-react-form](https://github.com/nicolaslopezj/simple-react-form/#installation), but instead of using
+`simple-react-form-material-ui` you use `simple-react-form-bootstrap`.
 
 ## Fields
 * **TextFieldComponent**:
