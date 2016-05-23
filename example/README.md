@@ -6,9 +6,11 @@ If you don't have meteor, please install it first.
 
 Then,
 * `npm install`
+
 (To install the deps, only needed once)
 
 * `meteor`
+
 And go to http://localhost:3000
 
 Take a look at [client/main.js][]. All the needed code is there.
