@@ -12,6 +12,9 @@
     "build-watch": "babel --watch src -d lib",
     "prepublish": "npm run build"
   },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fermuch/simple-react-form-bootstrap.git"
