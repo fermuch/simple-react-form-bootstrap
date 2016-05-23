@@ -1,6 +1,6 @@
 # simple-react-form-bootstrap
 
-Bootstrap fields for [simple-react-form][]. Based on [react-bootstrap][]
+Bootstrap fields for [simple-react-form][]. Based on [react-bootstrap][].
 
 `npm install simple-react-form-bootstrap --save`
 
