@@ -40,7 +40,11 @@ class SelectFieldComponent extends FieldType {
     if (this.props.options) {
       options = this.props.options;
     } else if (this.props.fieldSchema && this.props.fieldSchema.allowedValues) {
-      options = _.map(this.props.fieldSchema.allowedValues, function (allowedValue) {
+      let allowedValues = this.props.fieldSchema.allowedValues;
+      if (typeof allowedValues === 'function') {
+        allowedValues = this.props.fieldSchema.allowedValues();
+      }
+      options = _.map(allowedValues, function (allowedValue) {
         return {
           label: allowedValue,
           value: allowedValue,
