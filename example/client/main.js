@@ -38,6 +38,18 @@ class PostsCreate extends React.Component {
             placeholder='type="string" disabled={true}'
           />
           <Field
+            fieldName="email"
+            type="email"
+            label="Email"
+            placeholder='type="email"'
+          />
+          <Field
+            fieldName="password"
+            type="password"
+            label="Password"
+            placeholder='type="password"'
+          />
+          <Field
             fieldName="text"
             type="text"
             label="Text"

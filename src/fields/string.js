@@ -111,3 +111,27 @@ registerType({
   type: 'date',
   component: DateFieldComponent,
 });
+
+// email
+class EmailFieldComponent extends TextFieldComponent {
+  constructor(props) {
+    super(props);
+    this.type = 'email';
+  }
+}
+registerType({
+  type: 'email',
+  component: EmailFieldComponent,
+});
+
+// date
+class PasswordFieldComponent extends TextFieldComponent {
+  constructor(props) {
+    super(props);
+    this.type = 'password';
+  }
+}
+registerType({
+  type: 'password',
+  component: PasswordFieldComponent,
+});
