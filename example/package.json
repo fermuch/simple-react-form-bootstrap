@@ -9,6 +9,7 @@
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.4",
     "react-dom": "^15.1.0",
+    "react-tagsinput": "^3.7.0",
     "simple-react-form": "^1.2.0",
     "simple-react-form-bootstrap": "latest"
   },
