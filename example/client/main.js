@@ -5,6 +5,7 @@ import { Meteor } from 'meteor/meteor';
 
 // register the components
 import 'simple-react-form-bootstrap';
+import 'simple-react-form-bootstrap/lib/extras/geocoder';
 
 class PostsCreate extends React.Component {
 
@@ -89,6 +90,15 @@ class PostsCreate extends React.Component {
             type="string-array"
             label="String (array) (with maxTags!)"
             maxTags={2}
+          />
+
+
+
+          <br /><br /><br /><br />
+          <Field
+            fieldName="geo"
+            type="geocoder"
+            label="Geocoder"
           />
         </Form>
       </div>

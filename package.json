@@ -42,6 +42,7 @@
     "underscore": "1.x.x",
     "simple-react-form": "1.x.x",
     "react-tagsinput": "3.x.x",
-    "react-bootstrap": "0.29.x"
+    "react-bootstrap": "0.29.x",
+    "geocoder": "0.2.x"
   }
 }
