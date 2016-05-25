@@ -99,6 +99,11 @@ class PostsCreate extends React.Component {
             fieldName="geo"
             type="geocoder"
             label="Geocoder"
+            zoom={17}
+            center={{
+              lat: -29.713710,
+              lng: -57.085560
+            }}
           />
         </Form>
       </div>
