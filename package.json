@@ -1,6 +1,6 @@
 {
   "name": "simple-react-form-bootstrap",
-  "version": "0.0.14-test4",
+  "version": "0.0.14-test5",
   "description": "Bootstrap widgets for simple-react-form",
   "main": "lib/index.js",
   "directories": {

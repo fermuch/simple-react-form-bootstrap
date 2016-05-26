@@ -54,9 +54,9 @@ class GeocoderFieldComponent extends FieldType {
     );
   }
 
-  initialZoom() {
+  initialZoom(map) {
     if (this.state.marker && this.state.marker.position) {
-      this._googleMapComponent.panTo(this.state.marker.position);
+      map.panTo(this.state.marker.position);
     }
   }
 
@@ -183,7 +183,7 @@ class GeocoderFieldComponent extends FieldType {
               <GoogleMap
                 ref={(map) => {
                   this._googleMapComponent = map;
-                  this.initialZoom.bind(this);
+                  this.initialZoom.bind(this)(map);
                   return this._googleMapComponent;
                 }}
                 defaultZoom={this.props.zoom}
