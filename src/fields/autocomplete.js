@@ -4,7 +4,7 @@ import React from 'react';
 import {FieldType, registerType} from 'simple-react-form';
 import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from 'react-select';
-import 'react-select/dist/react-select.css';
+// import 'react-select/dist/react-select.css';
 
 const propTypes = {
   options: React.PropTypes.arrayOf(React.PropTypes.shape({

@@ -3,7 +3,7 @@ import React from 'react';
 import {FieldType, registerType} from 'simple-react-form';
 import { FormGroup, ControlLabel, HelpBlock } from 'react-bootstrap';
 import TagsInput from 'react-tagsinput';
-import 'react-tagsinput/react-tagsinput.css';
+// import 'react-tagsinput/react-tagsinput.css';
 
 const propTypes = {};
 

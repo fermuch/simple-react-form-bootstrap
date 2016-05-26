@@ -4,7 +4,7 @@ import React from 'react';
 import {FieldType, registerType} from 'simple-react-form';
 import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 import DateTime from 'react-datetime';
-import 'react-datetime/css/react-datetime.css';
+// import 'react-datetime/css/react-datetime.css';
 
 const propTypes = {};
 
