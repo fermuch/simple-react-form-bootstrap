@@ -30,6 +30,7 @@ class PostsCreate extends React.Component {
             type="string"
             label="String"
             placeholder='type="string"'
+            showLabel={true}
           />
           <Field
             fieldName="disabled_string"
@@ -37,35 +38,41 @@ class PostsCreate extends React.Component {
             label="Disabled String"
             disabled={true}
             placeholder='type="string" disabled={true}'
+            showLabel={true}
           />
           <Field
             fieldName="email"
             type="email"
             label="Email"
             placeholder='type="email"'
+            showLabel={true}
           />
           <Field
             fieldName="password"
             type="password"
             label="Password"
             placeholder='type="password"'
+            showLabel={true}
           />
           <Field
             fieldName="text"
             type="text"
             label="Text"
             placeholder='type="text"'
+            showLabel={true}
           />
           <Field
             fieldName="number"
             type="number"
             label="Number"
             placeholder='type="number"'
+            showLabel={true}
           />
           <Field
             fieldName="date"
             type="date"
             label="Date"
+            showLabel={true}
           />
 
           <center>
@@ -76,6 +83,7 @@ class PostsCreate extends React.Component {
             type="select"
             label="Select"
             placeholder='type="select"'
+            showLabel={true}
             options={[
               {label: 'Option A', value: 'a'},
               {label: 'Option B', value: 'b'},
@@ -90,6 +98,7 @@ class PostsCreate extends React.Component {
             type="string-array"
             label="String (array) (with maxTags!)"
             maxTags={2}
+            showLabel={true}
           />
 
 
@@ -104,6 +113,7 @@ class PostsCreate extends React.Component {
               lat: -29.713710,
               lng: -57.085560
             }}
+            showLabel={true}
           />
 
           <br /><br /><br /><br />
@@ -115,6 +125,21 @@ class PostsCreate extends React.Component {
               // no weekends
               return currentDate.day() !== 0 && currentDate.day() !== 6;
             }}
+            showLabel={true}
+          />
+
+
+          <br /><br /><br /><br />
+          <Field
+            fieldName="autocomplete"
+            type="autocomplete"
+            label="Autocomplete"
+            options={[
+              {label: 'Option A', value: 'a'},
+              {label: 'Option B', value: 'b'},
+            ]}
+            multi={false}
+            showLabel={true}
           />
         </Form>
       </div>
