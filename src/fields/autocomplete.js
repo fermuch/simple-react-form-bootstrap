@@ -57,6 +57,8 @@ class AutocompleteFieldComponent extends FieldType {
           options={this.props.options}
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
+          disabled={this.props.disabled}
+          placeholder={this.props.placeholder}
           {...this.passProps}
         />
         {this.props.errorMessage &&
