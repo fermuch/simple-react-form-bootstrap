@@ -44,6 +44,7 @@ class DateTimeFieldComponent extends FieldType {
           dateTime={this.state.value}
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
+          value={this.state.value}
           {...this.passProps}
         />
         {this.props.errorMessage &&
