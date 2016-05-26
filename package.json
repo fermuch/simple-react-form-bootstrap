@@ -1,6 +1,6 @@
 {
   "name": "simple-react-form-bootstrap",
-  "version": "0.0.15-test",
+  "version": "0.0.15-test1",
   "description": "Bootstrap widgets for simple-react-form",
   "main": "lib/index.js",
   "directories": {
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "react-datetime": "^2.2.1",
-    "react-select": "^0.9.1",
+    "react-select": "git+https://github.com/vickyonit/react-select.git#allow_create",
     "underscore": "1.x.x",
     "simple-react-form": "1.x.x",
     "react-tagsinput": "3.x.x",
