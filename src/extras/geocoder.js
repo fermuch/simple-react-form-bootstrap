@@ -55,7 +55,6 @@ class GeocoderFieldComponent extends FieldType {
   }
 
   initialZoom(map) {
-    console.info('about to zoom! ', this.state, map);
     if (map && this.state.marker && this.state.marker.position) {
       map.panTo(this.state.marker.position);
     }
