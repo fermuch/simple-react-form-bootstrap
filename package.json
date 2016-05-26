@@ -1,6 +1,6 @@
 {
   "name": "simple-react-form-bootstrap",
-  "version": "0.0.14-test",
+  "version": "0.0.14-test2",
   "description": "Bootstrap widgets for simple-react-form",
   "main": "lib/index.js",
   "directories": {
@@ -10,8 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib",
     "build-watch": "babel --watch src -d lib",
-    "prepublish": "npm run build",
-    "preinstall": "npm run prepublish"
+    "prepublish": "npm run build"
   },
   "files": [
     "lib"
