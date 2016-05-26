@@ -15,7 +15,8 @@ const propTypes = {
   center: React.PropTypes.shape({
     lat: React.PropTypes.number.isRequired,
     lng: React.PropTypes.number.isRequired
-  }).isRequired
+  }).isRequired,
+  restrictTo: React.PropTypes.string
 };
 
 const defaultProps = {};
@@ -81,7 +82,9 @@ class GeocoderFieldComponent extends FieldType {
   geoSearch(placeName) {
     const self = this;
     GMaps.geocode({
-      address: `${placeName}, paso de los libres, argentina`,
+      address: this.props.restrictTo ?
+        `${placeName}, ${this.props.restrictTo}` :
+        placeName,
       callback(data, status) {
         if (placeName === self.state.value.address && status === 'OK' && data.length > 0) {
           const geo = data[0].geometry.location;
