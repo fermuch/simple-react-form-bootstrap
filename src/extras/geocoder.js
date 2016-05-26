@@ -45,7 +45,7 @@ class GeocoderFieldComponent extends FieldType {
 
     this.geoSearch = _.debounce(
       this.geoSearch.bind(this),
-      3000
+      200
     );
     this.onWindowResize = _.throttle(
       this.onWindowResize.bind(this),
@@ -137,7 +137,7 @@ class GeocoderFieldComponent extends FieldType {
       <FormGroup
         validationState={this.props.errorMessage ? 'error' : undefined}
       >
-        <ControlLabel>{this.props.label}</ControlLabel>
+        { this.props.showLabel ? <ControlLabel>{this.props.label}</ControlLabel> : null }
         <FormControl
           ref='input'
           value={(this.state.value && this.state.value.address) || ''}
@@ -150,7 +150,7 @@ class GeocoderFieldComponent extends FieldType {
           {...this.passProps}
         />
         {this.props.errorMessage &&
-          <HelpBlock>Help text with validation state.</HelpBlock>
+          <HelpBlock>{this.props.errorMessage}</HelpBlock>
         }
         <ScriptjsLoader
             hostname={"maps.googleapis.com"}

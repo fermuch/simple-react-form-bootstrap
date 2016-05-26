@@ -43,7 +43,7 @@ class TextFieldComponent extends FieldType {
       <FormGroup
         validationState={this.props.errorMessage ? 'error' : undefined}
       >
-        <ControlLabel>{this.props.label}</ControlLabel>
+        { this.props.showLabel ? <ControlLabel>{this.props.label}</ControlLabel> : null }
         <FormControl
           ref='input'
           value={this.state.value || ''}
@@ -57,7 +57,7 @@ class TextFieldComponent extends FieldType {
           {...this.passProps}
         />
         {this.props.errorMessage &&
-          <HelpBlock>Help text with validation state.</HelpBlock>
+          <HelpBlock>{this.props.errorMessage}</HelpBlock>
         }
       </FormGroup>
     );
