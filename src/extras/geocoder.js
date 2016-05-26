@@ -181,7 +181,11 @@ class GeocoderFieldComponent extends FieldType {
             }
             googleMapElement={
               <GoogleMap
-                ref={(map) => (this._googleMapComponent = map; this.initialZoom.bind(this))}
+                ref={(map) => {
+                  this._googleMapComponent = map;
+                  this.initialZoom.bind(this);
+                  return this._googleMapComponent;
+                }}
                 defaultZoom={this.props.zoom}
                 defaultCenter={this.props.center}
                 onClick={this.onMapClick.bind(this)}
