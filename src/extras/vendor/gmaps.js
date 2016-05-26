@@ -158,7 +158,7 @@ var findAbsolutePosition = function(obj)  {
   return [curleft, curtop];
 };
 
-if (document && window) {
+if (typeof document !== 'undefined' && typeof window !== 'undefined') {
   var GMaps = (function(global) {
     "use strict";
 
