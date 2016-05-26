@@ -1,6 +1,6 @@
 {
   "name": "simple-react-form-bootstrap",
-  "version": "0.0.15-test1",
+  "version": "0.0.16",
   "description": "Bootstrap widgets for simple-react-form",
   "main": "lib/index.js",
   "directories": {
@@ -39,14 +39,13 @@
     "babel-preset-stage-0": "^6.5.0"
   },
   "dependencies": {
-    "react-datetime": "^2.2.1",
-    "react-select": "git+https://github.com/vickyonit/react-select.git#allow_create",
-    "underscore": "1.x.x",
-    "simple-react-form": "1.x.x",
-    "react-tagsinput": "3.x.x",
-    "react-bootstrap": "0.29.x",
     "geocoder": "0.2.x",
-    "react-google-maps": "4.x.x"
-
+    "react-bootstrap": "0.29.x",
+    "react-datetime": "^2.2.1",
+    "react-google-maps": "4.x.x",
+    "react-select": "git+https://github.com/vickyonit/react-select.git#allow_create",
+    "react-tagsinput": "3.x.x",
+    "simple-react-form": "1.x.x",
+    "underscore": "1.x.x"
   }
 }
