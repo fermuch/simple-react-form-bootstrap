@@ -124,7 +124,7 @@ registerType({
   component: EmailFieldComponent,
 });
 
-// date
+// password
 class PasswordFieldComponent extends TextFieldComponent {
   constructor(props) {
     super(props);
@@ -134,4 +134,16 @@ class PasswordFieldComponent extends TextFieldComponent {
 registerType({
   type: 'password',
   component: PasswordFieldComponent,
+});
+
+// color
+class ColorFieldComponent extends TextFieldComponent {
+  constructor(props) {
+    super(props);
+    this.type = 'color';
+  }
+}
+registerType({
+  type: 'color',
+  component: ColorFieldComponent,
 });
