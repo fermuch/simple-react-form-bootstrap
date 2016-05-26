@@ -140,7 +140,7 @@ class GeocoderFieldComponent extends FieldType {
       <FormGroup
         validationState={this.props.errorMessage ? 'error' : undefined}
       >
-        { this.props.showLabel ? <ControlLabel>{this.props.label}</ControlLabel> : null }
+        { this.props.label ? <ControlLabel>{this.props.label}</ControlLabel> : null }
         <FormControl
           ref='input'
           value={(this.state.value && this.state.value.address) || ''}

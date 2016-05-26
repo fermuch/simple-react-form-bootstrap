@@ -31,7 +31,7 @@ class TagsFieldComponent extends FieldType {
       <FormGroup
         validationState={this.props.errorMessage ? 'error' : undefined}
       >
-        { this.props.showLabel ? <ControlLabel>{this.props.label}</ControlLabel> : null }
+        { this.props.label ? <ControlLabel>{this.props.label}</ControlLabel> : null }
         <TagsInput
           ref='input'
           value={this.state.value}

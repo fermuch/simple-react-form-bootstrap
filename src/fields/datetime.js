@@ -38,7 +38,7 @@ class DateTimeFieldComponent extends FieldType {
       <FormGroup
         validationState={this.props.errorMessage ? 'error' : undefined}
       >
-        { this.props.showLabel ? <ControlLabel>{this.props.label}</ControlLabel> : null }
+        { this.props.label ? <ControlLabel>{this.props.label}</ControlLabel> : null }
         <DateTime
           ref='input'
           dateTime={this.state.value}
