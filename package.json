@@ -45,5 +45,8 @@
     "react-bootstrap": "0.29.x",
     "geocoder": "0.2.x",
     "react-google-maps": "4.x.x"
+  },
+  "dependencies": {
+    "react-bootstrap-datetimepicker": "0.0.22"
   }
 }

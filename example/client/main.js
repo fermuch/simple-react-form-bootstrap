@@ -105,6 +105,13 @@ class PostsCreate extends React.Component {
               lng: -57.085560
             }}
           />
+
+          <br /><br /><br /><br />
+          <Field
+            fieldName="datetime"
+            type="datetime"
+            label="DateTime"
+          />
         </Form>
       </div>
     );

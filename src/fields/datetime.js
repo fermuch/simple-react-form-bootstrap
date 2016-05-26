@@ -1,29 +1,29 @@
 import React from 'react';
+// import _ from 'underscore';
 // import TextField from 'material-ui/TextField';
 import {FieldType, registerType} from 'simple-react-form';
-import { FormGroup, ControlLabel, HelpBlock } from 'react-bootstrap';
-import TagsInput from 'react-tagsinput';
-import 'react-tagsinput/react-tagsinput.css';
+import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
+import DateTimeField from 'react-bootstrap-datetimepicker';
+import 'react-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css';
 
 const propTypes = {};
 
 const defaultProps = {};
 
-class TagsFieldComponent extends FieldType {
+class DateTimeFieldComponent extends FieldType {
 
   constructor(props) {
     super(props);
-    this.type = props.type || 'text';
-    this.state = { value: props.value || [] };
+    this.state = { value: props.value };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({ value: nextProps.value });
   }
 
-  onChange(tags) {
-    this.setState({ value: tags });
-    this.props.onChange(tags);
+  onChange(date) {
+    this.setState({ value: date });
+    this.props.onChange(date);
   }
 
   render() {
@@ -32,10 +32,11 @@ class TagsFieldComponent extends FieldType {
         validationState={this.props.errorMessage ? 'error' : undefined}
       >
         { this.props.showLabel ? <ControlLabel>{this.props.label}</ControlLabel> : null }
-        <TagsInput
+        <DateTimeField
           ref='input'
-          value={this.state.value}
+          dateTime={this.state.value}
           onChange={this.onChange.bind(this)}
+          onBlur={() => this.props.onChange(this.state.value)}
           {...this.passProps}
         />
         {this.props.errorMessage &&
@@ -46,14 +47,12 @@ class TagsFieldComponent extends FieldType {
   }
 }
 
-TagsFieldComponent.propTypes = propTypes;
-TagsFieldComponent.defaultProps = defaultProps;
+DateTimeFieldComponent.propTypes = propTypes;
+DateTimeFieldComponent.defaultProps = defaultProps;
 
 registerType({
-  type: 'string-array',
-  component: TagsFieldComponent,
-});
-registerType({
-  type: 'tags',
-  component: TagsFieldComponent,
+  type: 'datetime',
+  component: DateTimeFieldComponent,
+  allowedTypes: [ Date, String ],
+  description: 'Simple select field.'
 });
