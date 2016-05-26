@@ -111,6 +111,10 @@ class PostsCreate extends React.Component {
             fieldName="datetime"
             type="datetime"
             label="DateTime"
+            isValidDate={(currentDate) => {
+              // no weekends
+              return currentDate.day() !== 0 && currentDate.day() !== 6;
+            }}
           />
         </Form>
       </div>

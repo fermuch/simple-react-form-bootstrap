@@ -47,6 +47,6 @@
     "react-google-maps": "4.x.x"
   },
   "dependencies": {
-    "react-bootstrap-datetimepicker": "0.0.22"
+    "react-datetime": "^2.2.1"
   }
 }
