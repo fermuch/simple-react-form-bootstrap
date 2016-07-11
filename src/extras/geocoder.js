@@ -164,7 +164,11 @@ class GeocoderFieldComponent extends FieldType {
         <ScriptjsLoader
             hostname={"maps.googleapis.com"}
             pathname={"/maps/api/js"}
-            query={{v: `3`, libraries: 'geometry,drawing,places'}}
+            query={{
+              v: `3`,
+              libraries: 'geometry,drawing,places',
+              key: this.passProps.apiKey
+            }}
             loadingElement={
               <div>
                 Loading...
