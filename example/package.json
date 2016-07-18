@@ -13,7 +13,7 @@
     "react-google-maps": "^4.10.1",
     "react-tagsinput": "^3.7.0",
     "simple-react-form": "^1.2.0",
-    "simple-react-form-bootstrap": "latest"
+    "simple-react-form-bootstrap": ".."
   },
   "devDependencies": {
     "eslint": "^2.10.2",

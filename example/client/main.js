@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Form, Field } from 'simple-react-form';
 import { Meteor } from 'meteor/meteor';
 
 // register the components
 import 'simple-react-form-bootstrap';
 import 'simple-react-form-bootstrap/lib/extras/geocoder';
+import { Form, Field } from 'simple-react-form';
 
 class PostsCreate extends React.Component {
 
@@ -27,16 +27,16 @@ class PostsCreate extends React.Component {
           </center>
           <Field
             fieldName="string"
-            type="string"
+            type="text"
             label="String"
-            placeholder='type="string"'
+            placeholder='type="text"'
           />
           <Field
             fieldName="disabled_string"
-            type="string"
+            type="text"
             label="Disabled String"
             disabled={true}
-            placeholder='type="string" disabled={true}'
+            placeholder='type="text" disabled={true}'
           />
           <Field
             fieldName="email"
