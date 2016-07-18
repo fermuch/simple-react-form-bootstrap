@@ -41,9 +41,9 @@
   "dependencies": {
     "geocoder": "0.2.x",
     "react-bootstrap": "0.29.x",
-    "react-datetime": "^2.3.2",
+    "react-datetime": "^2.3.3",
     "react-google-maps": "4.x.x",
-    "react-select": "1.0.0-beta13",
+    "react-select": "1.0.0-beta14",
     "react-tagsinput": "3.x.x",
     "simple-react-form": "1.x.x",
     "underscore": "1.x.x"
