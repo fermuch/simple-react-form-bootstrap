@@ -12,7 +12,7 @@ const defaultProps = {
   changeOnKeyDown: true
 };
 
-class TextFieldComponent extends FieldType {
+export default class TextFieldComponent extends FieldType {
 
   constructor(props) {
     super(props);
@@ -147,3 +147,13 @@ registerType({
   type: 'color',
   component: ColorFieldComponent,
 });
+
+export {
+  TextFieldComponent as TextField,
+  StringFieldComponent as StringField,
+  NumberFieldComponent as NumberField,
+  DateFieldComponent as DateField,
+  EmailFieldComponent as EmailField,
+  PasswordFieldComponent as PasswordField,
+  ColorFieldComponent as ColorField
+};

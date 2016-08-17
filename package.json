@@ -45,7 +45,7 @@
     "react-google-maps": "4.x.x",
     "react-select": "1.0.0-beta14",
     "react-tagsinput": "3.x.x",
-    "simple-react-form": "1.x.x",
+    "simple-react-form": "^1.6.0",
     "underscore": "1.x.x"
   }
 }
