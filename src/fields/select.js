@@ -96,3 +96,7 @@ registerType({
   allowedTypes: [ String, Number ],
   description: 'Simple select field.'
 });
+
+export {
+  SelectFieldComponent as SelectField
+};
