@@ -57,3 +57,7 @@ registerType({
   type: 'tags',
   component: TagsFieldComponent,
 });
+
+export {
+  TagsFieldComponent as TagsField
+};

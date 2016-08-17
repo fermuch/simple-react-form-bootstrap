@@ -212,3 +212,7 @@ registerType({
   type: 'geocoder',
   component: GeocoderFieldComponent
 });
+
+export {
+  GeocoderFieldComponent as GeocoderField
+};

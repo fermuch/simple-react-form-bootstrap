@@ -64,3 +64,7 @@ registerType({
   allowedTypes: [ Date, String ],
   description: 'Simple select field.'
 });
+
+export {
+  DateTimeFieldComponent as DatetimeField
+};
