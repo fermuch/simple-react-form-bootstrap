@@ -1,5 +1,4 @@
 export {
-  StringField,
   TextField,
   NumberField,
   DateField,

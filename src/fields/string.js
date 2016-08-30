@@ -72,18 +72,9 @@ registerType({
   type: 'text',
   component: TextFieldComponent,
 });
-
-
-// string
-class StringFieldComponent extends TextFieldComponent {
-  constructor(props) {
-    super(props);
-    this.type = 'string';
-  }
-}
 registerType({
   type: 'string',
-  component: StringFieldComponent,
+  component: TextFieldComponent,
 });
 
 
@@ -150,7 +141,6 @@ registerType({
 
 export {
   TextFieldComponent as TextField,
-  StringFieldComponent as StringField,
   NumberFieldComponent as NumberField,
   DateFieldComponent as DateField,
   EmailFieldComponent as EmailField,
