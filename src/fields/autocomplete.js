@@ -77,3 +77,7 @@ registerType({
   component: AutocompleteFieldComponent,
   allowedTypes: [ String, [ String ] ]
 });
+
+export {
+  AutocompleteFieldComponent as AutocompleteField
+};
