@@ -53,7 +53,7 @@ export default class TextFieldComponent extends FieldType {
           onChange={this.onChange.bind(this)}
           onKeyDown={this.onKeyDown.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
-          componentClass={fieldType === 'text' ? 'textarea' : 'input'}
+          componentClass={fieldType === 'textarea' ? 'textarea' : 'input'}
           {...this.passProps}
         />
         {this.props.errorMessage &&
@@ -76,6 +76,14 @@ registerType({
   type: 'string',
   component: TextFieldComponent,
 });
+
+// textarea
+class TextareaFieldComponent extends TextFieldComponent {
+  constructor(props) {
+    super(props);
+    this.type = 'textarea';
+  }
+}
 
 
 // number
@@ -141,6 +149,7 @@ registerType({
 
 export {
   TextFieldComponent as TextField,
+  TextareaFieldComponent as TextField,
   NumberFieldComponent as NumberField,
   DateFieldComponent as DateField,
   EmailFieldComponent as EmailField,
