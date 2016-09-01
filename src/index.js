@@ -1,5 +1,6 @@
 export {
   TextField,
+  TextareaField,
   NumberField,
   DateField,
   EmailField,
