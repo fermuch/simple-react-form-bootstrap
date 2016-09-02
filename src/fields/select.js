@@ -90,13 +90,6 @@ class SelectFieldComponent extends FieldType {
 SelectFieldComponent.propTypes = propTypes;
 SelectFieldComponent.defaultProps = defaultProps;
 
-registerType({
-  type: 'select',
-  component: SelectFieldComponent,
-  allowedTypes: [ String, Number ],
-  description: 'Simple select field.'
-});
-
 export {
   SelectFieldComponent as SelectField
 };

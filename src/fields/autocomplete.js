@@ -1,7 +1,7 @@
 import React from 'react';
 // import _ from 'underscore';
 // import TextField from 'material-ui/TextField';
-import {FieldType, registerType} from 'simple-react-form';
+import {FieldType} from 'simple-react-form';
 import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from 'react-select';
 // import 'react-select/dist/react-select.css';
@@ -71,12 +71,6 @@ class AutocompleteFieldComponent extends FieldType {
 
 AutocompleteFieldComponent.propTypes = propTypes;
 AutocompleteFieldComponent.defaultProps = defaultProps;
-
-registerType({
-  type: 'autocomplete',
-  component: AutocompleteFieldComponent,
-  allowedTypes: [ String, [ String ] ]
-});
 
 export {
   AutocompleteFieldComponent as AutocompleteField
