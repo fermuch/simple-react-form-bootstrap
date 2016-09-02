@@ -58,13 +58,6 @@ class DateTimeFieldComponent extends FieldType {
 DateTimeFieldComponent.propTypes = propTypes;
 DateTimeFieldComponent.defaultProps = defaultProps;
 
-registerType({
-  type: 'datetime',
-  component: DateTimeFieldComponent,
-  allowedTypes: [ Date, String ],
-  description: 'Simple select field.'
-});
-
 export {
   DateTimeFieldComponent as DatetimeField
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 // import TextField from 'material-ui/TextField';
-import {FieldType, registerType} from 'simple-react-form';
+import {FieldType} from 'simple-react-form';
 import {FormControl, FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 
 const propTypes = {
@@ -67,16 +67,6 @@ export default class TextFieldComponent extends FieldType {
 TextFieldComponent.propTypes = propTypes;
 TextFieldComponent.defaultProps = defaultProps;
 
-// text
-registerType({
-  type: 'text',
-  component: TextFieldComponent,
-});
-registerType({
-  type: 'string',
-  component: TextFieldComponent,
-});
-
 // textarea
 class TextareaFieldComponent extends TextFieldComponent {
   constructor(props) {
@@ -93,10 +83,6 @@ class NumberFieldComponent extends TextFieldComponent {
     this.type = 'number';
   }
 }
-registerType({
-  type: 'number',
-  component: NumberFieldComponent,
-});
 
 
 // date
@@ -106,10 +92,6 @@ class DateFieldComponent extends TextFieldComponent {
     this.type = 'date';
   }
 }
-registerType({
-  type: 'date',
-  component: DateFieldComponent,
-});
 
 // email
 class EmailFieldComponent extends TextFieldComponent {
@@ -118,10 +100,6 @@ class EmailFieldComponent extends TextFieldComponent {
     this.type = 'email';
   }
 }
-registerType({
-  type: 'email',
-  component: EmailFieldComponent,
-});
 
 // password
 class PasswordFieldComponent extends TextFieldComponent {
@@ -130,10 +108,6 @@ class PasswordFieldComponent extends TextFieldComponent {
     this.type = 'password';
   }
 }
-registerType({
-  type: 'password',
-  component: PasswordFieldComponent,
-});
 
 // color
 class ColorFieldComponent extends TextFieldComponent {
@@ -142,14 +116,10 @@ class ColorFieldComponent extends TextFieldComponent {
     this.type = 'color';
   }
 }
-registerType({
-  type: 'color',
-  component: ColorFieldComponent,
-});
 
 export {
   TextFieldComponent as TextField,
-  TextareaFieldComponent as TextField,
+  TextareaFieldComponent as TextareaField,
   NumberFieldComponent as NumberField,
   DateFieldComponent as DateField,
   EmailFieldComponent as EmailField,

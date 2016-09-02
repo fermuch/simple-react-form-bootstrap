@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormGroup, HelpBlock, Button, ControlLabel } from 'react-bootstrap'
-import { ArrayComponent, registerType } from 'simple-react-form'
+import { ArrayComponent } from 'simple-react-form'
 
 class BootstrapArray extends ArrayComponent {
 
@@ -67,11 +67,6 @@ BootstrapArray.defaultProps = {
   addButtonIcon: 'fa fa-plus',
   removeButtonIcon: 'fa fa-minus'
 }
-
-registerType({
-  type: 'array',
-  component: BootstrapArray
-})
 
 export {
   BootstrapArray as ArrayField

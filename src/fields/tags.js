@@ -1,6 +1,6 @@
 import React from 'react';
 // import TextField from 'material-ui/TextField';
-import {FieldType, registerType} from 'simple-react-form';
+import {FieldType} from 'simple-react-form';
 import { FormGroup, ControlLabel, HelpBlock } from 'react-bootstrap';
 import TagsInput from 'react-tagsinput';
 // import 'react-tagsinput/react-tagsinput.css';
@@ -48,15 +48,6 @@ class TagsFieldComponent extends FieldType {
 
 TagsFieldComponent.propTypes = propTypes;
 TagsFieldComponent.defaultProps = defaultProps;
-
-registerType({
-  type: 'string-array',
-  component: TagsFieldComponent,
-});
-registerType({
-  type: 'tags',
-  component: TagsFieldComponent,
-});
 
 export {
   TagsFieldComponent as TagsField

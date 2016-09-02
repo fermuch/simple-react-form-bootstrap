@@ -1,5 +1,5 @@
 import React from 'react'
-import { ObjectComponent, registerType } from 'simple-react-form'
+import { ObjectComponent } from 'simple-react-form'
 import { FormGroup, HelpBlock, ControlLabel } from 'react-bootstrap'
 
 class BootstrapObject extends ObjectComponent {
@@ -26,11 +26,6 @@ BootstrapObject.defaultProps = {
   ...ObjectComponent.defaultProps,
   parentClassName: ''
 }
-
-registerType({
-  type: 'object',
-  component: BootstrapObject
-})
 
 export {
   BootstrapObject as ObjectField
