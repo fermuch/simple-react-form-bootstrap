@@ -20,3 +20,5 @@ export {
   AutocompleteField
 }
 from './fields/autocomplete.js';
+export { ArrayField } from './fields/array.js';
+export { ObjectField } from './fields/object.js';
