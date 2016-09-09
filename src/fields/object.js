@@ -6,7 +6,7 @@ class BootstrapObject extends ObjectComponent {
 
   render() {
     return (
-      <FormGroup validationState={this.props.errorMessage ? 'error' : ''}>
+      <FormGroup validationState={this.props.errorMessage ? 'error' : undefined}>
         {this.props.label ? <ControlLabel>{this.props.label}</ControlLabel> : null}
         <div className={this.props.parentClassName}>
           {this.getChildrenComponents()}
