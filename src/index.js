@@ -21,9 +21,6 @@ import {
 } from './fields/autocomplete.js';
 import RadioField from './fields/radio.js';
 import CheckboxesField from './fields/checkboxes.js';
-import {
-  AutocompleteField
-} from './fields/autocomplete.js';
 import { ArrayField } from './fields/array.js';
 import { ObjectField } from './fields/object.js';
 
