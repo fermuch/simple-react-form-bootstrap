@@ -43,6 +43,9 @@ class DateTimeFieldComponent extends React.Component {
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
           value={this.state.value}
+          inputProps={{
+            placeholder: this.props.placeholder || this.props.passProps.placeholder
+          }}
           {...this.passProps}
         />
         {this.props.errorMessage &&
