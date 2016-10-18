@@ -1,7 +1,6 @@
 import React from 'react';
 // import _ from 'underscore';
 // import TextField from 'material-ui/TextField';
-import {FieldType} from 'simple-react-form';
 import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from 'react-select';
 // import 'react-select/dist/react-select.css';
@@ -18,7 +17,7 @@ const propTypes = {
 
 const defaultProps = {};
 
-class AutocompleteFieldComponent extends FieldType {
+class AutocompleteFieldComponent extends React.Component {
 
   constructor(props) {
     super(props);
@@ -58,7 +57,7 @@ class AutocompleteFieldComponent extends FieldType {
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
           disabled={this.props.disabled}
-          placeholder={this.props.placeholder}
+          placeholder={this.props.placeholder || this.props.passProps.placeholder}
           {...this.passProps}
         />
         {this.props.errorMessage &&

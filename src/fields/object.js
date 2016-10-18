@@ -1,9 +1,8 @@
-import React from 'react'
-import { ObjectComponent } from 'simple-react-form'
-import { FormGroup, HelpBlock, ControlLabel } from 'react-bootstrap'
+import React from 'react';
+import { ObjectComponent } from 'simple-react-form';
+import { FormGroup, HelpBlock, ControlLabel } from 'react-bootstrap';
 
 class BootstrapObject extends ObjectComponent {
-
   render() {
     return (
       <FormGroup validationState={this.props.errorMessage ? 'error' : undefined}>
@@ -13,20 +12,20 @@ class BootstrapObject extends ObjectComponent {
         </div>
         {this.props.errorMessage && <HelpBlock>{this.props.errorMessage}</HelpBlock>}
       </FormGroup>
-    )
+    );
   }
 }
 
 BootstrapObject.propTypes = {
   ...ObjectComponent.propTypes,
   parentClassName: React.PropTypes.string
-}
+};
 
 BootstrapObject.defaultProps = {
   ...ObjectComponent.defaultProps,
   parentClassName: ''
-}
+};
 
 export {
   BootstrapObject as ObjectField
-}
+};

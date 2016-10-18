@@ -151,7 +151,7 @@ class GeocoderFieldComponent extends FieldType {
           ref='input'
           value={(this.state.value && this.state.value.address) || ''}
           type={'text'}
-          placeholder={this.props.placeholder}
+          placeholder={this.props.placeholder || this.props.passProps.placeholder}
           disabled={this.props.disabled}
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}

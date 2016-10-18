@@ -1,6 +1,6 @@
-import React from 'react'
-import { FormGroup, HelpBlock, Button, ControlLabel } from 'react-bootstrap'
-import { ArrayComponent } from 'simple-react-form'
+import React from 'react';
+import { FormGroup, HelpBlock, Button, ControlLabel } from 'react-bootstrap';
+import { ArrayComponent } from 'simple-react-form';
 
 class BootstrapArray extends ArrayComponent {
 
@@ -14,26 +14,32 @@ class BootstrapArray extends ArrayComponent {
           {this.renderRemoveButton(index)}
         </div>
       </div>
-    )
+    );
   }
 
   renderRemoveButton(index) {
-    if (this.props.disabled) return
+    if (this.props.disabled) {
+      return;
+    }
     return (
       <Button bsStyle="danger" onClick={() => this.removeItem(index)}>
         <i className={this.props.removeButtonIcon} />
       </Button>
-    )
+    );
   }
 
   renderAddButton() {
-    if (!this.props.showAddButton) return
-    if (this.props.disabled) return
+    if (!this.props.showAddButton) {
+      return;
+    }
+    if (this.props.disabled) {
+      return;
+    }
     return (
       <Button bsStyle="primary" onClick={() => this.addItem()}>
         <i className={this.props.addButtonIcon} />
       </Button>
-    )
+    );
   }
 
   render() {
@@ -48,7 +54,7 @@ class BootstrapArray extends ArrayComponent {
         </div>
         {this.props.errorMessage && <HelpBlock>{this.props.errorMessage}</HelpBlock>}
       </FormGroup>
-    )
+    );
   }
 }
 
@@ -58,7 +64,7 @@ BootstrapArray.propTypes = {
   childrenClassName: React.PropTypes.string,
   addButtonIcon: React.PropTypes.string,
   removeButtonIcon: React.PropTypes.string
-}
+};
 
 BootstrapArray.defaultProps = {
   ...ArrayComponent.defaultProps,
@@ -66,8 +72,8 @@ BootstrapArray.defaultProps = {
   childrenClassName: 'row',
   addButtonIcon: 'fa fa-plus',
   removeButtonIcon: 'fa fa-minus'
-}
+};
 
 export {
   BootstrapArray as ArrayField
-}
+};
