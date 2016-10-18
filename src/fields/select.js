@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'underscore';
 // import TextField from 'material-ui/TextField';
-import {FieldType, registerType} from 'simple-react-form';
 import {FormControl, FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 
 const propTypes = {
@@ -19,7 +18,7 @@ const propTypes = {
 
 const defaultProps = {};
 
-class SelectFieldComponent extends FieldType {
+class SelectFieldComponent extends React.Component {
 
   constructor(props) {
     super(props);
@@ -70,7 +69,7 @@ class SelectFieldComponent extends FieldType {
           ref='input'
           value={this.state.value || ''}
           type={fieldType}
-          placeholder={this.props.placeholder}
+          placeholder={this.props.placeholder || this.props.passProps.placeholder}
           disabled={this.props.disabled}
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}

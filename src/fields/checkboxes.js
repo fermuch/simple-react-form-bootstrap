@@ -1,7 +1,6 @@
-import React from 'react'
-import _ from 'underscore'
-import { FieldType } from 'simple-react-form'
-import { FormGroup, HelpBlock, ControlLabel, Checkbox } from 'react-bootstrap'
+import React from 'react';
+import _ from 'underscore';
+import { FormGroup, HelpBlock, ControlLabel, Checkbox } from 'react-bootstrap';
 
 const propTypes = {
   inline: React.PropTypes.bool,
@@ -13,65 +12,63 @@ const propTypes = {
       React.PropTypes.number
     ]).isRequired
   }))
-}
+};
 
 const defaultProps = {
   inline: false,
   parentClassName: ''
-}
+};
 
-export default class CheckboxesComponent extends FieldType {
-
+export default class CheckboxesComponent extends React.Component {
   constructor(props) {
-    super(props)
-
+    super(props);
     this.state = {
       value: props.value
-    }
+    };
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ value: nextProps.value })
+    this.setState({ value: nextProps.value });
   }
 
   onCheck(value, values) {
-    let newValues = []
+    let newValues = [];
     if (_.contains(values, value)) {
-      newValues = _.without(values, value)
+      newValues = _.without(values, value);
     } else {
-      newValues = _.union(values, [value])
+      newValues = _.union(values, [ value ]);
     }
-    this.props.onChange(newValues)
+    this.props.onChange(newValues);
   }
 
   getOptions() {
-    let options = []
+    let options = [];
     if (this.props.options) {
       if (typeof this.props.options === 'function') {
-        options = this.props.options()
+        options = this.props.options();
       } else {
-        options = this.props.options
+        options = this.props.options;
       }
     } else if (this.props.fieldSchema && this.props.fieldSchema.allowedValues) {
-      let allowedValues = this.props.fieldSchema.allowedValues
+      let allowedValues = this.props.fieldSchema.allowedValues;
       if (typeof allowedValues === 'function') {
-        allowedValues = this.props.fieldSchema.allowedValues()
+        allowedValues = this.props.fieldSchema.allowedValues();
       }
       options = _.map(allowedValues, (allowedValue) => {
         return {
           label: allowedValue,
           value: allowedValue
-        }
-      })
+        };
+      });
     } else {
-      throw new Error('You must set the options for the radio field')
+      throw new Error('You must set the options for the radio field');
     }
-    return options
+    return options;
   }
 
   render() {
-    const { fieldName, label, errorMessage, inline, parentClassName } = this.props
-    const { value } = this.state
+    const { fieldName, label, errorMessage, inline, parentClassName } = this.props;
+    const { value } = this.state;
 
     return (
       <FormGroup validationState={errorMessage ? 'error' : undefined}>
@@ -93,9 +90,9 @@ export default class CheckboxesComponent extends FieldType {
         </div>
         {errorMessage && <HelpBlock>{errorMessage}</HelpBlock>}
       </FormGroup>
-    )
+    );
   }
 }
 
-CheckboxesComponent.propTypes = propTypes
-CheckboxesComponent.defaultProps = defaultProps
+CheckboxesComponent.propTypes = propTypes;
+CheckboxesComponent.defaultProps = defaultProps;

@@ -1,19 +1,18 @@
 import React from 'react';
 // import TextField from 'material-ui/TextField';
-import {FieldType} from 'simple-react-form';
 import {FormControl, FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 
 const propTypes = {
   changeOnKeyDown: React.PropTypes.bool,
-  fieldType: React.PropTypes.string
+  fieldType: React.PropTypes.string,
+  passProps: React.PropTypes.any
 };
 
 const defaultProps = {
   changeOnKeyDown: true
 };
 
-export default class TextFieldComponent extends FieldType {
-
+export default class TextFieldComponent extends React.Component {
   constructor(props) {
     super(props);
     this.type = props.type || 'text';
@@ -48,7 +47,7 @@ export default class TextFieldComponent extends FieldType {
           ref='input'
           value={this.state.value || ''}
           type={fieldType}
-          placeholder={this.props.placeholder}
+          placeholder={this.props.placeholder || this.props.passProps.placeholder}
           disabled={this.props.disabled}
           onChange={this.onChange.bind(this)}
           onKeyDown={this.onKeyDown.bind(this)}

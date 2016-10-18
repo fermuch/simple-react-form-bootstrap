@@ -1,6 +1,5 @@
 import React from 'react';
 // import TextField from 'material-ui/TextField';
-import {FieldType} from 'simple-react-form';
 import { FormGroup, ControlLabel, HelpBlock } from 'react-bootstrap';
 import TagsInput from 'react-tagsinput';
 // import 'react-tagsinput/react-tagsinput.css';
@@ -9,7 +8,7 @@ const propTypes = {};
 
 const defaultProps = {};
 
-class TagsFieldComponent extends FieldType {
+class TagsFieldComponent extends React.Component {
 
   constructor(props) {
     super(props);
