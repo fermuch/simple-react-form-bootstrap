@@ -1,6 +1,6 @@
 {
   "name": "simple-react-form-bootstrap",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Bootstrap widgets for simple-react-form",
   "main": "lib/index.js",
   "directories": {
@@ -43,7 +43,7 @@
   "dependencies": {
     "geocoder": "0.2.x",
     "react-bootstrap": "^0.30.5",
-    "react-datetime": "^2.5.0",
+    "react-datetime": "^2.6.0",
     "react-google-maps": "4.x.x",
     "react-select": "1.0.0-beta14",
     "react-tagsinput": "3.x.x",
