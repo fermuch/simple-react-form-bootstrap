@@ -37,7 +37,7 @@ export default class TextFieldComponent extends React.Component {
   }
 
   render() {
-    var fieldType = this.props.fieldType || this.type;
+    const fieldType = this.props.fieldType || this.type;
     return (
       <FormGroup
         validationState={this.props.errorMessage ? 'error' : undefined}
@@ -53,7 +53,7 @@ export default class TextFieldComponent extends React.Component {
           onKeyDown={this.onKeyDown.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
           componentClass={fieldType === 'textarea' ? 'textarea' : 'input'}
-          {...this.passProps}
+          {...this.props.passProps}
         />
         {this.props.errorMessage &&
           <HelpBlock>{this.props.errorMessage}</HelpBlock>

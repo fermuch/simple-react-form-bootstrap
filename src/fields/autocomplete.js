@@ -23,7 +23,7 @@ class AutocompleteFieldComponent extends React.Component {
     super(props);
     this.state = {
       value: props.value,
-      multi: (this.passProps && this.passProps.multi) || false
+      multi: (props.passProps && props.passProps.multi) || false
     };
   }
 
@@ -58,7 +58,7 @@ class AutocompleteFieldComponent extends React.Component {
           onBlur={() => this.props.onChange(this.state.value)}
           disabled={this.props.disabled}
           placeholder={this.props.placeholder || this.props.passProps.placeholder}
-          {...this.passProps}
+          {...this.props.passProps}
         />
         {this.props.errorMessage &&
           <HelpBlock>{this.props.errorMessage}</HelpBlock>

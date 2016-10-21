@@ -74,7 +74,7 @@ class SelectFieldComponent extends React.Component {
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
           componentClass="select"
-          {...this.passProps}
+          {...this.props.passProps}
         >
           {this.renderItems()}
         </FormControl>

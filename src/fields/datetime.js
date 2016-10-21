@@ -46,7 +46,7 @@ class DateTimeFieldComponent extends React.Component {
           inputProps={{
             placeholder: this.props.placeholder || this.props.passProps.placeholder
           }}
-          {...this.passProps}
+          {...this.props.passProps}
         />
         {this.props.errorMessage &&
           <HelpBlock>{this.props.errorMessage}</HelpBlock>
