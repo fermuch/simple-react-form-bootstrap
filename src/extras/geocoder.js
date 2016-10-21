@@ -156,7 +156,7 @@ class GeocoderFieldComponent extends FieldType {
           onChange={this.onChange.bind(this)}
           onBlur={() => this.props.onChange(this.state.value)}
           componentClass={'input'}
-          {...this.passProps}
+          {...this.props.passProps}
         />
         {this.props.errorMessage &&
           <HelpBlock>{this.props.errorMessage}</HelpBlock>
@@ -167,7 +167,7 @@ class GeocoderFieldComponent extends FieldType {
             query={{
               v: `3`,
               libraries: 'geometry,drawing,places',
-              key: this.passProps.apiKey
+              key: this.props.passProps.apiKey
             }}
             loadingElement={
               <div>

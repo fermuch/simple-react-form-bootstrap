@@ -35,7 +35,7 @@ class TagsFieldComponent extends React.Component {
           ref='input'
           value={this.state.value}
           onChange={this.onChange.bind(this)}
-          {...this.passProps}
+          {...this.props.passProps}
         />
         {this.props.errorMessage &&
           <HelpBlock>{this.props.errorMessage}</HelpBlock>
