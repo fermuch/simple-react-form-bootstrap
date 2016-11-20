@@ -81,6 +81,20 @@ class NumberFieldComponent extends TextFieldComponent {
     super(props);
     this.type = 'number';
   }
+
+  onKeyDown(event) {
+    if (event.keyCode === 13) {
+      this.props.onChange(parseInt(this.state.value));
+    }
+  }
+
+  onChange(event) {
+    this.setState({ value: event.target.value });
+    if (this.props.changeOnKeyDown) {
+      this.props.onChange(parseInt(event.target.value));
+    }
+  }
+
 }
 
 
