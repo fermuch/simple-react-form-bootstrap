@@ -1,5 +1,4 @@
 import React from 'react';
-// import TextField from 'material-ui/TextField';
 import {FormControl, FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 
 const propTypes = {
@@ -84,14 +83,14 @@ class NumberFieldComponent extends TextFieldComponent {
 
   onKeyDown(event) {
     if (event.keyCode === 13) {
-      this.props.onChange(parseInt(this.state.value));
+      this.props.onChange(parseInt(this.state.value, 10));
     }
   }
 
   onChange(event) {
     this.setState({ value: event.target.value });
     if (this.props.changeOnKeyDown) {
-      this.props.onChange(parseInt(event.target.value));
+      this.props.onChange(parseInt(event.target.value, 10));
     }
   }
 
@@ -103,14 +102,6 @@ class DateFieldComponent extends TextFieldComponent {
   constructor(props) {
     super(props);
     this.type = 'date';
-  }
-}
-
-// email
-class EmailFieldComponent extends TextFieldComponent {
-  constructor(props) {
-    super(props);
-    this.type = 'email';
   }
 }
 
@@ -135,7 +126,6 @@ export {
   TextareaFieldComponent as TextareaField,
   NumberFieldComponent as NumberField,
   DateFieldComponent as DateField,
-  EmailFieldComponent as EmailField,
   PasswordFieldComponent as PasswordField,
   ColorFieldComponent as ColorField
 };

@@ -1,7 +1,8 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import FieldsDemo from './fields/index.jsx';
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <FieldsDemo />,
   document.querySelector('#wrapper')
 );
