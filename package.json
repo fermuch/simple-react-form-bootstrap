@@ -41,14 +41,14 @@
     "chokidar": "^1.6.1",
     "eslint-plugin-react": "^6.8.0"
   },
+  "peerDependencies": {
+    "react-bootstrap": "^0.30.7",
+    "simple-react-form": "^1.8.0"
+  },
   "dependencies": {
-    "geocoder": "0.2.x",
-    "react-bootstrap": "^0.30.5",
     "react-datetime": "^2.6.0",
-    "react-google-maps": "4.x.x",
     "react-select": "1.0.0-beta14",
     "react-tagsinput": "3.x.x",
-    "simple-react-form": "^1.7.3",
     "underscore": "1.x.x"
   }
 }
