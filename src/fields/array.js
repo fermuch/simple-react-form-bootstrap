@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormGroup, HelpBlock, Button, ControlLabel } from 'react-bootstrap';
 import { ArrayComponent } from 'simple-react-form';
 
@@ -60,10 +61,10 @@ class BootstrapArray extends ArrayComponent {
 
 BootstrapArray.propTypes = {
   ...ArrayComponent.propTypes,
-  parentClassName: React.PropTypes.string,
-  childrenClassName: React.PropTypes.string,
-  addButtonIcon: React.PropTypes.string,
-  removeButtonIcon: React.PropTypes.string
+  parentClassName: PropTypes.string,
+  childrenClassName: PropTypes.string,
+  addButtonIcon: PropTypes.string,
+  removeButtonIcon: PropTypes.string
 };
 
 BootstrapArray.defaultProps = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ObjectComponent } from 'simple-react-form';
 import { FormGroup, HelpBlock, ControlLabel } from 'react-bootstrap';
 
@@ -18,7 +19,7 @@ class BootstrapObject extends ObjectComponent {
 
 BootstrapObject.propTypes = {
   ...ObjectComponent.propTypes,
-  parentClassName: React.PropTypes.string
+  parentClassName: PropTypes.string
 };
 
 BootstrapObject.defaultProps = {
