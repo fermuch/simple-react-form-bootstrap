@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'underscore';
 // import TextField from 'material-ui/TextField';
 import {FieldType, registerType} from 'simple-react-form';
@@ -11,12 +12,12 @@ import { default as ScriptjsLoader } from 'react-google-maps/lib/async/ScriptjsL
 
 
 const propTypes = {
-  zoom: React.PropTypes.number.isRequired,
-  center: React.PropTypes.shape({
-    lat: React.PropTypes.number.isRequired,
-    lng: React.PropTypes.number.isRequired
+  zoom: PropTypes.number.isRequired,
+  center: PropTypes.shape({
+    lat: PropTypes.number.isRequired,
+    lng: PropTypes.number.isRequired
   }).isRequired,
-  restrictTo: React.PropTypes.string
+  restrictTo: PropTypes.string
 };
 
 const defaultProps = {};

@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "geocoder": "0.2.x",
+    "prop-types": "^15.5.10",
     "react-bootstrap": "^0.31.5",
     "react-datetime": "^2.6.0",
     "react-google-maps": "4.x.x",

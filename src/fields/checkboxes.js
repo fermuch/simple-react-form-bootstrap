@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'underscore';
 import { FormGroup, HelpBlock, ControlLabel, Checkbox } from 'react-bootstrap';
 
 const propTypes = {
-  inline: React.PropTypes.bool,
-  parentClassName: React.PropTypes.string,
-  options: React.PropTypes.arrayOf(React.PropTypes.shape({
-    label: React.PropTypes.string.isRequired,
-    value: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
+  inline: PropTypes.bool,
+  parentClassName: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
     ]).isRequired
   }))
 };

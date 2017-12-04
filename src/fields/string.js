@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import TextField from 'material-ui/TextField';
 import {FormControl, FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
 
 const propTypes = {
-  changeOnKeyDown: React.PropTypes.bool,
-  fieldType: React.PropTypes.string,
-  passProps: React.PropTypes.any
+  changeOnKeyDown: PropTypes.bool,
+  fieldType: PropTypes.string,
+  passProps: PropTypes.any
 };
 
 const defaultProps = {
